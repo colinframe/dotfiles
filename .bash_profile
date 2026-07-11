@@ -50,4 +50,7 @@ complete -W "NSGlobalDomain" defaults;
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
 # init rbenv
-eval "$(rbenv init -)"
+if command -v rbenv >/dev/null 2>&1; then
+	eval "$(rbenv init -)"
+fi 
+
